@@ -31,7 +31,7 @@ Before setting up the project, ensure you have the following:
    ```
 
 ### User Interface
-![User Interface](images\UI_interface.jpg)
+![User Interface](images/UI_interface.jpg)
 
 
 
