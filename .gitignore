@@ -1,0 +1,4 @@
+data/Chinook_Sqlite.sql
+data/airline_policy_vectordb
+data/stories_vectordb
+venv/*
