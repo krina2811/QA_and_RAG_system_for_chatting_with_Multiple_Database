@@ -24,12 +24,6 @@ Before setting up the project, ensure you have the following:
 - Git
 - Access to OpenAI API for LLM integration
 
-### Installation Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/agentic-system.git
-   ```
-
 ### User Interface
 ![User Interface](images/UI_interface.jpg)
 
