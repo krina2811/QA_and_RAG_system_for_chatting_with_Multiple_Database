@@ -61,9 +61,21 @@ class LoadToolsConfig:
 
 
         ##for upload csv files
-        self.upload_csv_directory = app_config['for_uploaded_csv_file']['upload_file_dir']
+        self.upload_csv_directory = app_config['for_uploaded_csv_file']['upload_file_sql_dir']
         self.upload_csv_sqlagent_llm = app_config['for_uploaded_csv_file']['llm']
         self.upload_csv_llm_temperature = app_config['for_uploaded_csv_file']['llm_temperature'] 
+
+        ### for upload pdf files
+                # Stories RAG configs
+        self.for_uploaded_pdf_rag_llm = app_config["for_uploaded_pdf_rag"]["llm"]
+        self.for_uploaded_pdf_rag_llm_temperature = float(app_config["for_uploaded_pdf_rag"]["llm_temperature"])
+        self.for_uploaded_pdf_rag_embedding_model = app_config["for_uploaded_pdf_rag"]["embedding_model"]
+        self.for_uploaded_pdf_rag_vectordb_directory = str(here( app_config["for_uploaded_pdf_rag"]["vectordb"]))  # needs to be strin for summation in chromadb backend: self._settings.require("persist_directory") + "/chroma.sqlite3"
+        self.for_uploaded_pdf_rag_k = app_config["for_uploaded_pdf_rag"]["k"]
+        self.for_uploaded_pdf_rag_chunk_size = app_config["for_uploaded_pdf_rag"]["chunk_size"]
+        self.for_uploaded_pdf_rag_chunk_overlap = app_config["for_uploaded_pdf_rag"]["chunk_overlap"]
+        self.for_uploaded_pdf_rag_collection_name = app_config["for_uploaded_pdf_rag"]["collection_name"]
+
 
         # Graph configs
         self.thread_id = str(

@@ -92,15 +92,13 @@ class ChinookSQLAgent:
 
         Music
         Business"""
-        category_chain = create_extraction_chain_pydantic(
-            Table, self.sql_agent_llm, system_message=category_chain_system)
+        category_chain = create_extraction_chain_pydantic(Table, self.sql_agent_llm, system_message=category_chain_system)
         table_chain = category_chain | get_tables  # noqa
         query_chain = create_sql_query_chain(self.sql_agent_llm, self.db)
         # Convert "question" key to the "input" key expected by current table_chain.
         table_chain = {"input": itemgetter("question")} | table_chain
         # Set table_names_to_use using table_chain.
-        self.full_chain = RunnablePassthrough.assign(
-            table_names_to_use=table_chain) | query_chain
+        self.full_chain = RunnablePassthrough.assign(table_names_to_use=table_chain) | query_chain
 
 
 @tool
