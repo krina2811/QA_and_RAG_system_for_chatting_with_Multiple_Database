@@ -5,9 +5,10 @@ from agent_graph.tool_chinook_sqlagent import query_chinook_sqldb
 from agent_graph.tool_lookup_policy_rag import lookup_swiss_airline_policy
 from agent_graph.tool_tavily_search import load_tavily_search_tool
 from agent_graph.tool_stories_rag import lookup_stories
+from agent_graph.tool_uploaded_csv_sqlagent import query_upload_csv_sqldb
 from agent_graph.load_tools_config import LoadToolsConfig
 from agent_graph.agent_backend import State, BasicToolNode, route_tools, plot_agent_schema
-
+from agent_graph.tool_uploaded_pdf_rag import query_uploaded_pdfs
 TOOLS_CFG = LoadToolsConfig()
 
 
@@ -55,6 +56,8 @@ def build_graph():
              lookup_swiss_airline_policy,
              lookup_stories,
              query_chinook_sqldb,
+             query_upload_csv_sqldb,
+             query_uploaded_pdfs
              ]
     # Tell the LLM which tools it can call
     primary_llm_with_tools = primary_llm.bind_tools(tools)
@@ -70,6 +73,8 @@ def build_graph():
             lookup_swiss_airline_policy,
             lookup_stories,
             query_chinook_sqldb,
+            query_upload_csv_sqldb,
+            query_uploaded_pdfs
         ])
     graph_builder.add_node("tools", tool_node)
     # The `tools_condition` function returns "tools" if the chatbot asks to use a tool, and "__end__" if

@@ -24,13 +24,24 @@ stories_rag:
   chunk_overlap: 100
   k: 2
 
+for_uploaded_pdf_rag:
+  vectordb: "data/uploaded_pdfs"
+  collection_name: uploaded-pdf-rag-chroma
+  llm: gpt-4o-mini
+  llm_temperature: 0.0
+  embedding_model: text-embedding-3-small
+  chunk_size: 500
+  chunk_overlap: 100
+  k: 2
+
+
 chinook_sqlagent_configs:
   chinook_sqldb_dir: "data/Chinook.db"
   llm: "gpt-3.5-turbo"
   llm_temperature: 0.0
 
 for_uploaded_csv_file:
-  upload_file_dir : "data/upload_csv.db"
+  upload_file_sql_dir : "data/upload_csv.db"
   llm: "gpt-3.5-turbo"
   llm_temperature: 0.0
 
