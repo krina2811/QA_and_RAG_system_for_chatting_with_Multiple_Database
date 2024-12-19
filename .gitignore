@@ -3,7 +3,5 @@ data/airline_policy_vectordb
 data/stories_vectordb
 data/upload_csv.db
 venv/*
-memory/*
+memory
 .env
-
-
