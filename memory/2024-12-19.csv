@@ -552,3 +552,13 @@ This summary provides an overview of Manthan Bhikadiya's qualifications, skills,
   Developed a deep learning model using Keras and TensorFlow to predict COVID-19 from audio recordings, achieving an approximate 70% accuracy.
 
 This summary provides an overview of Krina Bhikadiya's qualifications, skills, and experience. If you need more specific information or details, feel free to ask!"
+1,15:42:06,"In chinook DB, list the total sales per country. Which country's customers spent the most?
+","The total sales per country from the Chinook database are as follows:
+
+- **USA**: $523.06
+- **Canada**: $303.96
+- **France**: $195.10
+- **Brazil**: $190.10
+- **Germany**: $156.48
+
+The country whose customers spent the most is the **USA** with total sales of $523.06."
